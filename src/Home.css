@@ -1,0 +1,39 @@
+/* src/HomePage.css */
+.home {
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  
+  .header {
+    background-color: #28a745;
+    color: white;
+    padding: 20px;
+  }
+  
+  .header h1 {
+    margin: 0;
+  }
+  
+  .header nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .header nav ul li {
+    display: inline;
+    margin: 0 15px;
+  }
+  
+  .header nav ul li a {
+    color: rgb(255, 251, 251);
+    text-decoration: none;
+  }
+  
+  .about-section, .classes-section, .footer {
+    padding: 20px;
+  }
+  
+  .footer {
+    background-color: #f1f1f1;
+    padding: 10px;
+  }
