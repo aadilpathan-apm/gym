@@ -1,21 +1,12 @@
-
 import React from 'react';
-import Login from './Login';
-import Registration from './Registration';
-import Home from './Home';
-
-
-
+import AppRouter from './AppRouter';
 
 function App() {
   return (
     <div className="App">
-      <Login />
-      <Registration />
-      <Home />
+      <AppRouter />
     </div>
   );
 }
 
 export default App;
-

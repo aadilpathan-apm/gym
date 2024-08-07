@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
+import { useNavigate } from 'react-router-dom';
 
 const Registration = () => {
   const [formData, setFormData] = useState({
@@ -9,13 +10,12 @@ const Registration = () => {
     password: '',
     confirmPassword: '',
   });
-
   const [errors, setErrors] = useState({});
-
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
+  const navigate = useNavigate();
 
   const validate = () => {
     let errors = {};
@@ -36,6 +36,8 @@ const Registration = () => {
     if (Object.keys(validationErrors).length === 0) {
       console.log('Form submitted successfully', formData);
       // Handle form submission (e.g., send data to the server)
+      alert('Registration successful');
+      navigate('/login');
     }
   };
 
@@ -96,7 +98,7 @@ const Registration = () => {
         <button type="submit">Register</button>
 
       </form>
-      <p>Already registered? <a href="/Login">Login</a></p>
+      <button onClick={() => navigate('/login')}>Back to Login</button>
     </div>
   );
 };
